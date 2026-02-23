@@ -125,6 +125,10 @@ class AutocompleteChatbotUI {
       return;
     }
 
+    // For normal word/prefix processing, clear previous console history
+    // so only the latest result block is shown.
+    this.consoleOutput.textContent = "";
+
     const lines = [];
     lines.push(`--- Processing: "${input}" ---`);
 
